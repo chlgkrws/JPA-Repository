@@ -16,9 +16,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-//@Entity
+@Entity
 @Table(name="ORDERS")	//DB의 order가 키워드일 수 있으므로
-public class Order {
+public class Order extends BaseEntity{
 
 	@Id
 	@GeneratedValue

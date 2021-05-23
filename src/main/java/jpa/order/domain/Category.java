@@ -11,8 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-//s@Entity
-public class Category {
+@Entity
+public class Category extends BaseEntity {
 
 	@Id
 	@GeneratedValue

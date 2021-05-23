@@ -6,6 +6,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import jpa.order.domain.Book;
+
 
 public class JPAMain {
 
@@ -17,9 +19,16 @@ public class JPAMain {
 		tx.begin();
 		try {
 
+			Book book = new Book();
+			book.setName("JPA");
+			book.setAuthor("최학준");
+
+			em.persist(book);
+			System.out.println(book.getId());
 
 			tx.commit();
 		} catch (Exception e) {
+			System.out.println("ROLLBACK!!!!!!!");
 			tx.rollback();
 		}
 		em.close();
