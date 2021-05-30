@@ -36,8 +36,12 @@ public class JPAMain {
 			List<Team> result = em.createQuery("Select t FROM Member m join m.team t",Team.class).getResultList();
 
 
+
+
 			//임베디드 타입 프로젝션
 			em.createQuery("SELECT o.address FROM Order o", Address.class).getResultList();
+
+
 
 
 			//Paging
@@ -45,6 +49,8 @@ public class JPAMain {
 						.setFirstResult(10)
 						.setMaxResults(10)
 						.getResultList();
+
+
 
 
 			//조인
@@ -64,8 +70,22 @@ public class JPAMain {
 			List<Member> Join3 = em.createQuery(leftJoinWithOn, Member.class).getResultList();
 
 
+
+
+			//JPQL 타입 표현
+			String query = "select m.username, 'hello', true From Member m";
+			List<Object[]> result2 = em.createQuery(query).getResultList();
+
+			for(Object[] objects : result2) {
+				System.out.println(result2.get(0));
+				System.out.println(result2.get(1));
+				System.out.println(result2.get(2));
+			}
+
+
 			tx.commit();
 		} catch (Exception e) {
+			System.out.println("############## ROLL_BACK #################");
 			tx.rollback();
 		}
 		em.close();
