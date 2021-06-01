@@ -18,7 +18,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
-@Entity
+//@Entity
 @Table(name = "MEMBER")		//매핑할 테이블 명
 @SequenceGenerator(
 		 name = "MEMBER_SEQ_GENERATOR",
@@ -26,7 +26,7 @@ import javax.persistence.Transient;
 		 initialValue = 1, allocationSize = 1)
 public class Member {
 
-	@Column(name = "MEMBER_ID", updatable = false)	//MEMBER_ID 컬럼 / 업데이트 불가능
+	//@Column(name = "MEMBER_ID", updatable = false)	//MEMBER_ID 컬럼 / 업데이트 불가능
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ_GENERATOR")
 	private Long id;

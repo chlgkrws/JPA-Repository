@@ -17,9 +17,7 @@ public class EntityBasicMain {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		try {
-
-
-
+			System.out.println("??");
 			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();
