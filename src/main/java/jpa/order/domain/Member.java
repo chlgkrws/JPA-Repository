@@ -1,26 +1,23 @@
 package jpa.order.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-public class Member  extends BaseEntity{
+public class Member extends BaseEntity{
 
 	@Id
 	@GeneratedValue
 	@Column(name = "MEMBER_ID")
-	private Long idzz;
+	private Long id;
 
 	private String name;
 
-	private String city;
-
-	private String street;
-
-	private String zipcode;
+	@Embedded					//생략가능
+	private Address address;
 
 
 	public String getName() {
@@ -31,29 +28,22 @@ public class Member  extends BaseEntity{
 		this.name = name;
 	}
 
-	public String getCity() {
-		return city;
+	private Long getId() {
+		return id;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	private void setId(Long id) {
+		this.id = id;
 	}
 
-	public String getStreet() {
-		return street;
+	private Address getAddress() {
+		return address;
 	}
 
-	public void setStreet(String street) {
-		this.street = street;
+	private void setAddress(Address address) {
+		this.address = address;
 	}
 
-	public String getZipcode() {
-		return zipcode;
-	}
-
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
-	}
 
 
 

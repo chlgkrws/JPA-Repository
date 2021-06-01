@@ -12,6 +12,7 @@ public abstract class BaseEntity{
 	private LocalDateTime createTime;
 	private String updateBy;
 	private LocalDateTime updateTime;
+
 	public String getCreateBy() {
 		return createBy;
 	}

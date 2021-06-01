@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -19,7 +20,7 @@ public class Category extends BaseEntity {
 	private Long id;
 	private String name;
 
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "CATEGORY_ITEM",
 			joinColumns = @JoinColumn(name = "CATEGORY_ID"),
 			inverseJoinColumns = @JoinColumn(name = "ITEM_ID")

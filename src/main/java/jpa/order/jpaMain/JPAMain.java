@@ -1,12 +1,14 @@
 package jpa.order.jpaMain;
 
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import jpa.order.domain.Book;
+import jpa.order.domain.Member;
 
 
 public class JPAMain {
@@ -19,12 +21,14 @@ public class JPAMain {
 		tx.begin();
 		try {
 
-			Book book = new Book();
-			book.setName("JPA");
-			book.setAuthor("최학준");
+			/* 기본 조회 JPQL
+			List<Member> result = em.createQuery(
+					"select m From Member m where m.name like '%Kim%'",Member.class
+					).getResultList();
+			*/
 
-			em.persist(book);
-			System.out.println(book.getId());
+			
+
 
 			tx.commit();
 		} catch (Exception e) {

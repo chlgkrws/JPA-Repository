@@ -9,7 +9,7 @@ public class Address {
 	private String street;
 	private String zipcode;
 
-
+	//임베디드 값 타입을 사용하면 이런식으로 커스텀 메서드를 사용할 수 있음
 	public String fullAddress() {
 		return getCity() +" "+getStreet() +" "+getZipcode();
 	}
