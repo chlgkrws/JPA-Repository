@@ -3,7 +3,7 @@ package jpa.relation.entity;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-//@Entity
+@Entity
 @DiscriminatorValue("book")
 public class Book extends Item {
 
