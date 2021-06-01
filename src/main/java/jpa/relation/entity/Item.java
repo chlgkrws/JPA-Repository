@@ -9,7 +9,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-@Entity
+//@Entity
 @Inheritance(strategy = InheritanceType.JOINED)		//조인전략
 //@Inheritance(strategy = InheritanceType.SINGLE_TABLE)	//단일테이블 전략
 //@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) //구현클래스 테이블 전략
