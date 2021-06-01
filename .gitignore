@@ -5,7 +5,8 @@ target/
 !**/src/test/**/target/
 .yml
 /target/**
-*.properties
+/**/pom.properties
+pom.properties
 
 ### STS ###
 .apt_generated
@@ -16,6 +17,7 @@ target/
 .springBeans
 .sts4-cache
 application.yml
+.properties
 
 ### IntelliJ IDEA ###
 .idea
