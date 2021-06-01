@@ -40,6 +40,11 @@ public class JpaBasic {
 			List<Member> result = em.createQuery("select m from Member as m", Member.class).getResultList();
 			System.out.println(result.get(0).getName());
 
+
+			Member member1 = em.find(Member.class, 10);
+
+			member1.setName("수정된 춘식");
+
 			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();

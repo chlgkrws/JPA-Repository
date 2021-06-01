@@ -2,8 +2,10 @@ package jpa.basic.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "MEMBER_BASIC")
 public class Member {
 
 	@Id
