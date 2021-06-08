@@ -6,7 +6,7 @@ JPA의 내부 동작 방식을 이해하고 객체와 관계형 데이터베이�
 ### 프로젝트 관리
 
 
-공부한 내용을 [개인블로그](https://tosuccess.tistory.com/category/JPA)에 정리 하고, 소스는 JPA-Repository에서 관리한다
+공부한 내용을 [개인블로그](https://tosuccess.tistory.com/category/JPA)에 정리 하고, 소스는 jpa-study에서 관리한다
 
 
 ### 스터드 키워드 정리
